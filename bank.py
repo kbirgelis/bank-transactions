@@ -3,6 +3,9 @@
 # 
 
 transactions = []
+money = 0
+
+import time
 
 while True:
     print("\nBanking Options:")
@@ -17,19 +20,39 @@ while True:
     if choice == '1':
         # deposit, jāpievieno jaunu transakciju
         # https://www.w3schools.com/python/python_lists_add.asp
-        pass
+
+     money_deposit = int(input('How much money would you like to deposit? Enter here: '))
+     transactions.append(str(money))
+     money =+ money_deposit
+
+     pass
+
     elif choice == '2':
         # withdraw, jāpievieno jaunu transakciju ar mīnus zīmi
         # https://www.w3schools.com/python/python_lists_add.asp
-        pass
+
+     money_withdraw = int(input('How much money would you like to withdraw? Enter here: '))
+     transactions.append(-money_withdraw)
+     money -= money_withdraw
+
+     pass
+
     elif choice == '3':
         # pārbaudīt atlikumu
         # jasummē visus saraksta elementus kopā ar ciklu palidzību
         # https://www.w3schools.com/python/python_for_loops.asp
+
+        balance = sum(transactions)
+
+        print("Your aviable bank balance is: " + sum)
+
         pass
+
     elif choice == '4':
         # rāda 10 pēdējas transakcijas
         # https://www.w3schools.com/python/python_lists_access.asp (Range of Negative Indexes)
+        print(transactions[10:])
+        
         pass
     elif choice == '5':
         print("Exiting the banking system. Thank you!")
